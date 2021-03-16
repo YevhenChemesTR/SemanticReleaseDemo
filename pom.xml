@@ -10,9 +10,9 @@
 	</parent>
 	<groupId>io.github.bhuwanupadhyay</groupId>
 	<artifactId>semantic-versioning-on-docker-build-and-helm-chart</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>Semantic</name>
-	<description>Semantic</description>
+	<version>${revision}</version>
+	<name>Semantic versioning on docker build and helm chart</name>
+	<description>Semantic versioning on docker build and helm chart</description>
 	<properties>
 		<java.version>11</java.version>
 		<kotlin.version>1.4.30</kotlin.version>
