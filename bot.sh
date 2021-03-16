@@ -10,9 +10,9 @@ case ${option} in
       ;;
    --publish)
       # Publish Docker in Github Packages
-      DOCKER_PKG=docker.pkg.github.com/bhuwanupadhyay/semantic-versioning-on-docker-build-and-helm-chart/my-service:"$next_version"
-      docker login docker.pkg.github.com -u BhuwanUpadhyay -p "$GITHUB_TOKEN"
-      docker tag docker.io/bhuwanupadhyay/my-service:"$next_version" "$DOCKER_PKG"
+      DOCKER_PKG=docker.pkg.github.com/yevhenchemestr/semanticreleasedemo/semantic-versioning-on-docker-build-and-helm-chart:"$next_version"
+      docker login docker.pkg.github.com -u YevhenChemesTR -p "$GITHUB_TOKEN"
+      docker tag docker.io/chemesev/semantic-versioning-on-docker-build-and-helm-chart:"$next_version" "$DOCKER_PKG"
       docker push "$DOCKER_PKG"
 
       # Publish Helm chart in Github Releases
