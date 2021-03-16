@@ -124,7 +124,7 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <repository>docker.io/bhuwanupadhyay/${project.artifactId}</repository>
+                    <repository>docker.io/chemesev/${project.artifactId}</repository>
                     <dockerfile>${project.basedir}/src/main/docker/Dockerfile</dockerfile>
                     <tag>${project.version}</tag>
                 </configuration>
