@@ -16,11 +16,10 @@ case ${option} in
       docker push "$DOCKER_PKG"
 
       # Publish Helm chart in Github Releases
-      HELM_CHART="my-service-$next_version.tgz"
+      HELM_CHART="semantic-versioning-on-docker-build-and-helm-chart-$next_version.tgz"
       HELM_CHART_FILE_PATH="$(pwd)/target/helm/repo/$FILE_NAME"
 
-      # TODO: yourself
-      # Write a suitable script to upload your helm chart in your Artifactory or chart museum.
+      helm package $HELM_CHART_FILE_PATH
 
       echo "Mock publish: $HELM_CHART from $HELM_CHART_FILE_PATH"
       ;;
