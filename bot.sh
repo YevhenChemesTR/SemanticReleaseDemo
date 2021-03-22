@@ -19,8 +19,6 @@ case ${option} in
       HELM_CHART_FILE_NAME="semantic-versioning-on-docker-build-and-helm-chart-$next_version.tgz"
       HELM_CHART_FILE_PATH="$(pwd)/target/helm/repo/$HELM_CHART_FILE_NAME"
 
-      helm package $HELM_CHART_FILE_PATH
-
       echo "Mock publish: $HELM_CHART from $HELM_CHART_FILE_PATH"
       ;;
    *)
