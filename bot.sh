@@ -16,8 +16,8 @@ case ${option} in
       docker push "$DOCKER_PKG"
 
       # Publish Helm chart in Github Releases
-      HELM_CHART="semantic-versioning-on-docker-build-and-helm-chart-$next_version.tgz"
-      HELM_CHART_FILE_PATH="$(pwd)/target/helm/repo/$FILE_NAME"
+      HELM_CHART_FILE_NAME="semantic-versioning-on-docker-build-and-helm-chart-$next_version.tgz"
+      HELM_CHART_FILE_PATH="$(pwd)/target/helm/repo/$HELM_CHART_FILE_NAME"
 
       helm package $HELM_CHART_FILE_PATH
 
