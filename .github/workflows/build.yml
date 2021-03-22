@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - alpha
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -18,11 +19,9 @@ jobs:
         run: ./bot.sh --prepare
       - uses: actions/setup-node@v1
         name: Install semantic-release
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         with:
           node-version: "12.x"
       - name: Release
-        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
         run: |
           npm install -g semantic-release @semantic-release/{git,changelog,exec}
           semantic-release
